@@ -218,4 +218,5 @@ f:SetScript("OnEvent", function(_, event)
     else
         updateBars()
     end
+
 end)
