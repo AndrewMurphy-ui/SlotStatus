@@ -19,14 +19,10 @@ SlotStatus adds thin durability bars aligned with each equipment slot so players
 ---
 
 ## Features
-
 - Per-slot durability bars aligned with equipment slots  
 - Automatic updates when gear durability changes  
 - Color-coded durability states  
-- Tooltip extension showing **item level**  
-- Tooltip extension showing **total repair cost**  
-- Lightweight and minimal UI footprint  
-
+- Lightweight and minimal UI footprint
 ---
 
 ## Durability Colors
