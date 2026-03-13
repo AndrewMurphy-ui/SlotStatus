@@ -66,7 +66,7 @@ This era of the game does not include built-in durability visualization, requiri
 
 ## Version
 
-Current version: **v1.1.12**
+Current version: **0.0.1**
 
 ---
 
