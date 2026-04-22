@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![CurseForge](https://img.shields.io/badge/CurseForge-SlotStatus-f16436)
 
-
+![Durability bars on the Character Frame](docs/images/character-frame.png)
 
 
 > A lightweight but complete gear-maintenance addon for **World of Warcraft: Burning Crusade Classic (Anniversary)**.
