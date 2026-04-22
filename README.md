@@ -1,24 +1,21 @@
 # SlotStatus
 
-![Interface](https://img.shields.io/badge/Interface-20505-blue)
-![WoW](https://img.shields.io/badge/WoW-Burning%20Crusade%20Classic-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
-![CurseForge](https://img.shields.io/badge/CurseForge-SlotStatus-f16436)
+<p align="center">
+  <img src="https://img.shields.io/badge/Interface-20505-blue" alt="Interface">
+  <img src="https://img.shields.io/badge/WoW-Burning%20Crusade%20Classic-orange" alt="WoW">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
+  <img src="https://img.shields.io/badge/CurseForge-SlotStatus-f16436" alt="CurseForge">
+</p>
 
-> A lightweight but complete gear-maintenance addon for **World of Warcraft: Burning Crusade Classic (Anniversary)**.
+<p align="center">
+  <i>A lightweight but complete gear-maintenance addon for <b>World of Warcraft: Burning Crusade Classic (Anniversary)</b>.</i>
+</p>
 
 <p align="center">
   <img src="images/durability-bars-character-frame.png" alt="Durability bars on the Character Frame" width="500">
   <br>
   <sub><i>Color-coded durability bars update live on every equipment slot</i></sub>
 </p>
-
-<p align="center">
-  <img src="images/menu-preview.png" alt="SlotStatus options menu" width="550">
-  <br>
-  <sub><i>Full options panel with live preview, color pickers, and threshold sliders</i></sub>
-</p>
-
 
 SlotStatus started as a simple idea — show durability bars directly on the Character Frame so you don't have to hover every slot to check your gear — and grew into a full suite for tracking, repairing, and maintaining your equipment without ever leaving the game.
 
@@ -60,6 +57,12 @@ Slim, color-coded bars sit flush against every equipment slot on the paperdoll. 
 - Fully customizable colors, thresholds, alpha, thickness, and position
 
 ### Rich Tooltips
+
+<p align="center">
+  <img src="images/tooltip-overview.png" alt="Rich item tooltip showing repair cost and nearest vendor" width="420">
+  <br>
+  <sub><i>Hover any equipped item to see repair cost and the nearest repair vendor</i></sub>
+</p>
 
 Hover any equipped item to see:
 
@@ -105,6 +108,12 @@ Three levels of heads-up so you never get caught with broken gear:
 
 ### Gear Overview Window
 
+<p align="center">
+  <img src="images/gear-overview.png" alt="Gear Overview window" width="500">
+  <br>
+  <sub><i>At-a-glance gear condition, repair cost, and per-slot durability</i></sub>
+</p>
+
 A custom-styled dialog you can open from the minimap button, a broker panel (Titan / Bazooka / ElvUI), or a slash command. It shows:
 
 - **Condition** verdict — at-a-glance summary of your overall gear state
@@ -124,6 +133,12 @@ A custom-styled dialog you can open from the minimap button, a broker panel (Tit
 
 ### Full Options Panel
 
+<p align="center">
+  <img src="images/menu-preview.png" alt="SlotStatus options menu" width="550">
+  <br>
+  <sub><i>Live preview, color pickers, and threshold sliders on the Advanced tab</i></sub>
+</p>
+
 Accessible from **Interface Options** or `/ss options`. Four tabs:
 
 | Tab          | Contents                                                                                                                                                |
@@ -139,23 +154,23 @@ Accessible from **Interface Options** or `/ss options`. Four tabs:
 
 ## Slash Commands
 
-| Command                               | What it does                     |
-| ------------------------------------- | -------------------------------- |
-| `/ss` or `/slotstatus`                | Show help                        |
-| `/ss options`                         | Open the options panel           |
-| `/ss advanced`                        | Panel → Advanced tab             |
-| `/ss stats`                           | Session gold in/out              |
-| `/ss reset`                           | Reset session stats              |
-| `/ss autorepair`                      | Toggle auto-repair               |
-| `/ss autosell`                        | Toggle auto-sell grays           |
-| `/ss guild`                           | Toggle "guild bank first"        |
-| `/ss warn [N\|off\|chat\|full]`       | Warning mode and threshold       |
-| `/ss pins`                            | Toggle map pins                  |
-| `/ss mm`                              | Toggle minimap button            |
-| `/ss vendors [clear]`                 | List or clear discovered vendors |
-| `/ss discover`                        | Toggle vendor auto-discovery     |
-| `/ss welcome`                         | Re-open the welcome popup        |
-| `/ss debug`                           | Toggle debug prints              |
+| Command                          | What it does                     |
+| -------------------------------- | -------------------------------- |
+| `/ss` or `/slotstatus`           | Show help                        |
+| `/ss options`                    | Open the options panel           |
+| `/ss advanced`                   | Panel → Advanced tab             |
+| `/ss stats`                      | Session gold in/out              |
+| `/ss reset`                      | Reset session stats              |
+| `/ss autorepair`                 | Toggle auto-repair               |
+| `/ss autosell`                   | Toggle auto-sell grays           |
+| `/ss guild`                      | Toggle "guild bank first"        |
+| `/ss warn [N\|off\|chat\|full]`  | Warning mode and threshold       |
+| `/ss pins`                       | Toggle map pins                  |
+| `/ss mm`                         | Toggle minimap button            |
+| `/ss vendors [clear]`            | List or clear discovered vendors |
+| `/ss discover`                   | Toggle vendor auto-discovery     |
+| `/ss welcome`                    | Re-open the welcome popup        |
+| `/ss debug`                      | Toggle debug prints              |
 
 ---
 
