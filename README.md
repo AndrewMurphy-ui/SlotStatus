@@ -3,6 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Interface-20505-blue" alt="Interface">
   <img src="https://img.shields.io/badge/WoW-Burning%20Crusade%20Classic-orange" alt="WoW">
+  <img src="https://img.shields.io/badge/Version-1.0.1-brightgreen" alt="Version">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green" alt="License"></a>
   <img src="https://img.shields.io/badge/CurseForge-SlotStatus-f16436" alt="CurseForge">
 </p>
@@ -33,6 +34,7 @@ Everything is **per-character**, stored locally, and works **out of the box**. N
   - [Automation at the Merchant](#automation-at-the-merchant)
   - [Warning System](#warning-system)
   - [Gear Overview Window](#gear-overview-window)
+  - [Alert Column](#alert-column)
   - [Minimap Button & Broker Support](#minimap-button--broker-support)
   - [Full Options Panel](#full-options-panel)
 - [Slash Commands](#slash-commands)
@@ -40,6 +42,7 @@ Everything is **per-character**, stored locally, and works **out of the box**. N
 - [Design Philosophy](#design-philosophy)
 - [Installation](#installation)
 - [Compatibility](#compatibility)
+- [Changelog](#changelog)
 - [Feedback & Issues](#feedback--issues)
 - [License](#license)
 
@@ -59,7 +62,7 @@ Slim, color-coded bars sit flush against every equipment slot on the paperdoll. 
 ### Rich Tooltips
 
 <p align="center">
-  <img src="images/tooltip-overview.png" alt="Rich item tooltip showing repair cost and nearest vendor" width="420">
+  <img src="images/tooltip-damaged-overview.png" alt="Rich item tooltip showing repair cost and nearest vendor" width="420">
   <br>
   <sub><i>Hover any equipped item to see repair cost and the nearest repair vendor</i></sub>
 </p>
@@ -109,17 +112,37 @@ Three levels of heads-up so you never get caught with broken gear:
 ### Gear Overview Window
 
 <p align="center">
-  <img src="images/gear-overview.png" alt="Gear Overview window" width="500">
+  <img src="images/gear-overview.png" alt="Gear Overview window — clean state" width="500">
   <br>
   <sub><i>At-a-glance gear condition, repair cost, and per-slot durability</i></sub>
 </p>
 
 A custom-styled dialog you can open from the minimap button, a broker panel (Titan / Bazooka / ElvUI), or a slash command. It shows:
 
-- **Condition** verdict — at-a-glance summary of your overall gear state
-- **Repair Cost** block — total repair due vs gold on hand
-- **Gear Wear** stat sheet — slots needing repair, your lowest-durability piece, a status verdict, and average durability
+- **Condition** verdict — at-a-glance summary of your overall gear state (Excellent, Needs repair, Worn, or Critical)
+- **Repair Cost** block — total repair due vs gold on hand, with an **OK** or **short X** indicator
+- **Gear Wear** stat sheet — slots needing repair, your lowest-durability piece, a Critical / Worn / OK status breakdown, and average durability
 - **Slot Table** — every equipment slot with its current durability, color-coded to match the bars on your paperdoll
+- **Repair All** and **Find Nearest Vendor** footer buttons — one click to repair on the spot, or route to the closest known vendor
+
+### Alert Column
+
+<p align="center">
+  <img src="images/gear-repair-overview-damaged.png" alt="Gear Overview with Alert chips on damaged gear" width="500">
+  <br>
+  <sub><i>The Alert column flags every slot below 100% — Minor, Worn, or Critical</i></sub>
+</p>
+
+The rightmost **Alert** column gives you a per-row at-a-glance marker for any slot below 100% durability. Three tiers:
+
+| Chip       | Meaning                                                                | Default trigger |
+| ---------- | ---------------------------------------------------------------------- | --------------- |
+| `!! Crit`  | Dangerously low — risks breaking mid-fight                             | `< 40%`         |
+| `! Worn`   | Below the warning threshold — repair at the next vendor                | `< 75%`         |
+| `· Minor`  | Not urgent, but no longer pristine                                     | `< 100%`        |
+| *(blank)*  | Slot is at 100% durability                                             | `== 100%`       |
+
+Chip color and text tint track your Healthy/Worn/Critical color pickers, so if you recolor your durability bars on the **Advanced** tab, the chips follow automatically.
 
 ### Minimap Button & Broker Support
 
@@ -195,9 +218,43 @@ SlotStatus is designed to **stay out of your way**. It doesn't modify the Blizza
 
 ### Option 1 — CurseForge (recommended)
 
-Install via the [CurseForge app](https://www.curseforge.com/wow/addons) and search for **SlotStatus**.
+Install via the [CurseForge app](https://www.curseforge.com/wow/addons) and search for **SlotStatus**. Updates deliver automatically.
 
 ### Option 2 — Manual install
 
-1. Download the latest release ZIP from the [Releases page](../../releases).
-2. Extract the `SlotStatus` folder into your WoW AddOns directory:
+1. Download the latest release ZIP from the [Releases page](../../releases) (or the [CurseForge Files tab](https://www.curseforge.com/wow/addons)).
+2. Extract the archive. You should get a folder named `SlotStatus/` containing `SlotStatus.toc`, `SlotStatus.lua`, and `logo.tga`.
+3. Drop that `SlotStatus/` folder into your WoW AddOns directory:
+
+   | Client flavor                   | Path                                                                              |
+   | ------------------------------- | --------------------------------------------------------------------------------- |
+   | **Burning Crusade / Anniversary** | `World of Warcraft\_anniversary_\Interface\AddOns\`                             |
+   | **Classic Era**                 | `World of Warcraft\_classic_era_\Interface\AddOns\`                               |
+   | **Classic (WotLK / Cata / MoP)** | `World of Warcraft\_classic_\Interface\AddOns\`                                  |
+
+4. Restart WoW (a `/reload` is not enough for first install — the client needs to scan the TOC).
+5. At the character-select screen, click **AddOns** (bottom-left) and make sure **SlotStatus** is enabled.
+   - If the client flags it as "out of date," tick **Load out of date AddOns** at the top of the list. The addon declares `Interface: 20505` (TBC Classic 2.5.5) for widest compatibility; it runs cleanly on Anniversary/Classic Era with that checkbox on.
+6. Log in and type `/ss` to confirm it loaded.
+
+### Uninstall
+
+Delete the `SlotStatus/` folder from your AddOns directory. Saved settings live in `WTF\Account\<account>\<realm>\<character>\SavedVariables\SlotStatus.lua` — remove that file too if you want a clean slate.
+
+---
+
+## Compatibility
+
+- **Game versions:** designed for Burning Crusade Classic / Classic Anniversary (TOC `Interface: 20505`). Also loads cleanly on Classic Era with **Load out of date AddOns** enabled.
+- **Other addons:** does **not** replace or reparent any Blizzard frame, so it coexists with ElvUI, Bartender, Titan Panel, Bazooka, etc. without taint.
+- **Libraries:** none required. LibDataBroker-1.1 is *optional* — if a broker display addon is loaded, SlotStatus publishes a data source; if not, nothing happens.
+- **Localization:** English strings only at the moment. Locale-agnostic for all gameplay logic (uses slot IDs, not item names).
+
+---
+
+## Changelog
+
+### v1.0.1 — Apr 23, 2026
+
+- **Fixed:** The Gear Overview **Alert** column now shows a subtle `· Minor` chip on every row below 100% durability. Previously the column stayed blank when all damaged items were still in the Healthy band, even though the **Condition** header said *"Needs repair"* — which looked like a broken column.
+- **Internal:** The three on-screen version strings (Gear Overview footer, options panel header
