@@ -6,7 +6,7 @@
 ![CurseForge](https://img.shields.io/badge/CurseForge-SlotStatus-f16436)
 
 
-https://raw.githubusercontent.com/andrewmurphy-dev/SlotStatus/refs/heads/main/docs/images/character%20%231.png
+
 
 > A lightweight but complete gear-maintenance addon for **World of Warcraft: Burning Crusade Classic (Anniversary)**.
 
