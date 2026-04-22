@@ -7,9 +7,17 @@
 
 > A lightweight but complete gear-maintenance addon for **World of Warcraft: Burning Crusade Classic (Anniversary)**.
 
-![Durability Bars on the Character Frame](images/durability-bars-character-frame.png)
+<p align="center">
+  <img src="images/durability-bars-character-frame.png" alt="Durability bars on the Character Frame" width="500">
+  <br>
+  <sub><i>Color-coded durability bars update live on every equipment slot</i></sub>
+</p>
 
-![SlotStatus Menu Preview](images/menu-preview.png)
+<p align="center">
+  <img src="images/menu-preview.png" alt="SlotStatus options menu" width="550">
+  <br>
+  <sub><i>Full options panel with live preview, color pickers, and threshold sliders</i></sub>
+</p>
 
 
 SlotStatus started as a simple idea — show durability bars directly on the Character Frame so you don't have to hover every slot to check your gear — and grew into a full suite for tracking, repairing, and maintaining your equipment without ever leaving the game.
