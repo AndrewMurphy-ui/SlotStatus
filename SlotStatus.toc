@@ -1,0 +1,8 @@
+## Interface: 20505
+## Title: SlotStatus
+## Notes: Slot-aligned durability visibility + per-slot repair cost & nearest vendor
+## Author: Andrew
+## Version: 1.0.0
+## SavedVariablesPerCharacter: SlotStatusDB
+
+SlotStatus.lua
