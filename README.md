@@ -1,5 +1,10 @@
 # SlotStatus
 
+![Interface](https://img.shields.io/badge/Interface-20505-blue)
+![WoW](https://img.shields.io/badge/WoW-Burning%20Crusade%20Classic-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+![CurseForge](https://img.shields.io/badge/CurseForge-SlotStatus-f16436)
+
 > A lightweight but complete gear-maintenance addon for **World of Warcraft: Burning Crusade Classic (Anniversary)**.
 
 SlotStatus started as a simple idea — show durability bars directly on the Character Frame so you don't have to hover every slot to check your gear — and grew into a full suite for tracking, repairing, and maintaining your equipment without ever leaving the game.
