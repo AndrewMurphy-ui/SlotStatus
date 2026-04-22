@@ -9,7 +9,7 @@
 
 ![Durability Bars on the Character Frame](images/durability-bars-character-frame.png)
 
-![SlotStatus Menu Preview](images/slotstatus-menu-preview.png)
+![SlotStatus Menu Preview](images/menu-preview.png)
 
 
 SlotStatus started as a simple idea — show durability bars directly on the Character Frame so you don't have to hover every slot to check your gear — and grew into a full suite for tracking, repairing, and maintaining your equipment without ever leaving the game.
